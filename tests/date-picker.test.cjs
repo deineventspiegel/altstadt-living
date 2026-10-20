@@ -1,0 +1,13 @@
+const assert=require('node:assert/strict');
+const {parse,add,nights,valid,monthShift}=require('../public/date-picker.js');
+assert.equal(parse('2026-02-30'),null);
+assert.equal(add('2028-02-28',1),'2028-02-29');
+assert.equal(add('2026-12-31',1),'2027-01-01');
+assert.equal(nights('2026-10-24','2026-10-26'),2);
+assert.equal(nights('2027-03-27','2027-03-29'),2);
+assert.equal(monthShift('2026-12-31',1),'2027-01-01');
+assert.equal(valid('2026-11-11','2026-11-11','2026-10-20'),false);
+assert.equal(valid('2026-10-19','2026-10-23','2026-10-20'),false);
+assert.equal(valid('2026-10-20','2026-10-23','2026-10-20'),true);
+assert.equal(valid('2026-10-20','2026-10-23','2026-10-20','2026-10-22'),false);
+console.log('Date picker: invalid dates, leap years, DST, year boundaries and range validation passed.');

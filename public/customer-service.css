@@ -1,0 +1,37 @@
+.header-actions{display:flex;gap:10px;align-items:center;margin-left:auto}
+.apartment-page header .header-actions{position:absolute;top:32px;right:32px}
+.apartment-page header .header-actions .header-menu{position:static}
+.header-actions .service-trigger{font-size:10px;letter-spacing:.12em}
+.service-dialog{position:fixed;inset:24px 24px 24px auto;margin:0;width:460px;max-width:calc(100vw - 48px);max-height:calc(100dvh - 48px);height:790px;padding:26px;border:1px solid #ffffff70;border-radius:30px;background:rgba(247,244,239,.96);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);color:var(--ink);box-shadow:none;overflow:hidden}
+.service-dialog[open]{display:flex;flex-direction:column;gap:16px;animation:drawer-in .25s ease-out}
+.service-dialog::backdrop{background:#100e12a8;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.service-heading{display:flex;align-items:center;gap:14px;flex:none}
+.service-symbol{background:#e8e0d5;border-radius:18px;width:48px;height:48px;display:grid;place-items:center;flex:none}
+.service-heading .eyebrow{font-size:8px;margin:0 0 5px;letter-spacing:.2em}
+.service-heading h2{font-size:29px;line-height:1.1}
+.service-dialog .service-subtitle{font-size:10px;margin:5px 0 0}
+.service-close{align-self:flex-start;margin-left:auto;width:34px;height:34px;border:0;border-radius:50%;background:#e9e3db;font-size:26px;line-height:1}
+.service-property{padding:12px 15px;border:1px solid #dfd7ce;border-radius:16px;background:#ffffff80}
+.service-property label{display:block;font-size:9px;color:var(--muted)}
+.service-property select{border:0;min-height:30px;padding:2px 0;font-size:13px}
+.service-conversation{min-height:120px;flex:1;overflow:auto;overscroll-behavior:contain;display:flex;flex-direction:column;gap:13px;padding:4px 6px 8px 0;scrollbar-width:thin}
+.service-message{max-width:94%;padding:14px 16px;border:1px solid #e8e1d8;border-radius:18px 18px 18px 5px;background:#fff;flex:none}
+.service-message.guest{align-self:flex-end;background:#51473e;border-color:#51473e;border-radius:18px 18px 5px 18px}
+.service-message-label{font-size:9px;letter-spacing:.07em;color:#837366;display:block;margin-bottom:6px}
+.service-dialog .service-message p{font-size:13px;line-height:1.65;color:#554b42;margin:0;white-space:pre-wrap;overflow-wrap:anywhere}
+.service-message.guest .service-message-label,.service-dialog .service-message.guest p{color:#fff}
+.service-topics{display:flex;gap:7px;overflow:auto;flex:none;padding:3px 2px 8px;scrollbar-width:thin}
+.service-topics button{border:1px solid #d9cec0;border-radius:99px;white-space:nowrap;padding:9px 13px;font-size:11px;background:transparent;min-height:38px}
+.service-topics button:hover{background:#e8e0d5}
+.service-links{display:flex;flex-direction:column;gap:7px;text-align:center;flex:none}
+.service-book{background:#51473e;color:white;padding:12px;border-radius:14px;font-size:12px}
+.service-details{font-size:11px;text-decoration:underline;text-underline-offset:3px}
+.service-form{display:flex;align-items:center;gap:8px;padding:7px 8px 7px 14px;border:1px solid #dbd1c5;border-radius:20px;background:white;flex:none}
+.service-form input{font-size:14px;min-height:36px;padding:0;border:0;width:100%;min-width:0}
+.service-form button{border:0;border-radius:50%;width:36px;height:36px;flex:none;color:white;background:#51473e;font-size:24px}
+.service-dialog .service-disclosure{font-size:9px;line-height:1.5;margin:0;text-align:center}
+.service-reset{background:none;border:0;font-size:10px;text-decoration:underline;align-self:center;padding:0;flex:none}
+.service-sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+@media(max-width:760px){.header-actions{gap:6px}.header-actions .header-menu{padding:11px 12px;gap:7px;font-size:9px}.header-actions .service-trigger{width:48px;padding:8px}.service-trigger .service-label{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.service-dialog{inset:12px 12px auto;width:calc(100vw - 24px);max-width:none;height:calc(100dvh - 24px);max-height:calc(100dvh - 24px);padding:20px;border-radius:24px}.service-dialog[open]{gap:12px}}
+@media(max-width:370px){.header-actions .header-menu{border-width:4px;padding:9px}.header-actions .service-trigger{width:42px}.header-actions .menu-icon{width:17px;height:17px;flex-basis:17px}.service-heading h2{font-size:25px}}
+@media(prefers-reduced-motion:reduce){.service-dialog[open]{animation:none}}
