@@ -10,8 +10,8 @@ Root Directory: Repository-Wurzel. Framework Preset: Other.
 `vercel.json` legt `public` als Output Directory fest. Build und Installation sind leer.
 Keine Environment Variables oder API-Schlüssel erforderlich.
 
-Der vollständige Website-Stand liegt auf `main`. Das Vercel-Projekt wird vom
-Eigentümer nach dem GitHub-Import angelegt.
+Der vollständige Website-Stand liegt auf `main`. Die Website wird über Vercel unter
+https://www.altstadt-living.de ausgeliefert.
 
 ## Seiten
 
@@ -19,6 +19,7 @@ Eigentümer nach dem GitHub-Import angelegt.
 - `apartment-1.html`: Altstadt Living, 70 m²
 - `apartment-2.html`: Altstadt Living Deluxe, 80 m²
 - `buchen.html`: eigene Aufenthaltsauswahl und offizielles Smoobu-Formular
+- `impressum.html` und `datenschutz.html`: direkt verlinkte Entwürfe mit markierten Platzhaltern
 
 Das Verwaltungsdashboard ist nicht Bestandteil dieses Repositorys.
 
@@ -29,14 +30,31 @@ Die externe Buchungsseite ist `https://booking.smoobu.com/9A1926791`.
 Apartment, Reisedaten und Gästezahl müssen im Smoobu-Formular erneut bestätigt werden.
 Das ist ein echtes Buchungssystem, keine Zahlungs-Sandbox. Stripe ist noch nicht verbunden.
 
-## Vor dem öffentlichen Start ergänzen
+## Nächste Arbeitsschritte
 
-- Tatsächliche Kontakt-E-Mail und Telefonnummer in `public/config.js`.
-- Vollständige Betreiberangaben und passende Impressums-/Datenschutztexte.
-  Die aktuellen Texte in `public/app.js` sind ausdrücklich Vorschautexte.
-- Eigene Domain im Vercel-Projekt verbinden; bestehende E-Mail-DNS-Einträge erhalten.
-- Unterkunftsdaten, Preise, Verfügbarkeit und Buchungsbedingungen abschließend prüfen.
-- Browser-/Mobilansicht sowie Buchungs- und später Zahlungsablauf prüfen.
+1. Buchungsstrecke für beide Apartments prüfen: Preise, Verfügbarkeit, 1–4 Gäste,
+   Mindestaufenthalte, Gebühren, Stornierung und Buchungsbestätigung.
+2. Gewünschte Zahlungsart in Smoobu konfigurieren; Kartenzahlung erst mit Stripe-Livebetrieb.
+3. Verwaltungsdashboard später mit Smoobu und Booking.com verbinden.
+4. Betreiber- und Kontaktdaten zuletzt nachliefern (Wunsch des Auftraggebers).
+   Platzhalter in `public/impressum.html` und `public/datenschutz.html` ersetzen;
+   E-Mail und Telefonnummer zusätzlich in `public/config.js` eintragen.
+
+Die veröffentlichten Rechtstexte sind ausdrücklich Entwürfe und keine rechtliche
+Freigabe. Verträge, Löschfristen, Empfänger und Einwilligungsanforderungen müssen
+noch bestätigt werden. Google Maps lädt derzeit ohne vorgeschaltete Einwilligung;
+die Datenschutzerklärung beschreibt diesen Ist-Zustand und ersetzt keine technische
+Einwilligungslösung. Die Domain ist verbunden; die E-Mail-DNS-Einträge bleiben erhalten.
+Rechtsgrundlagen und Anbieterquellen für die redaktionelle Fertigstellung:
+
+- https://www.gesetze-im-internet.de/ddg/__5.html
+- https://www.gesetze-im-internet.de/vsbg/__36.html
+- https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32016R0679
+- https://www.gesetze-im-internet.de/ttdsg/__25.html
+- https://vercel.com/legal/privacy-notice
+- https://vercel.com/legal/dpa
+- https://www.smoobu.com/de/datenschutz/
+- https://policies.google.com/privacy?hl=de
 
 ## Prüfung
 

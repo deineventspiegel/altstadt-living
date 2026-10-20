@@ -1,0 +1,25 @@
+/* Legal drafts share the site's typography, rounded shapes and navigation. */
+.legal-page{padding-bottom:0}
+.legal-main{max-width:1000px;padding-top:55px}
+.legal-intro{max-width:850px;margin-bottom:48px}
+.legal-intro h1{font-size:clamp(34px,5.5vw,70px);line-height:1.15;overflow-wrap:anywhere}
+.legal-intro>p:last-child{margin-top:22px;font-size:14px}
+.legal-note{padding:25px 30px;border:1px solid #e2d6c5;background:#f7f1e7;border-radius:24px;margin-bottom:42px}
+.legal-note strong{font-size:15px}
+.legal-note p{margin-top:7px;font-size:14px}
+.legal-content{display:grid;gap:30px}
+.legal-page #main .legal-card{margin:0;padding:36px;background:var(--cream);border:1px solid var(--line);border-radius:28px;min-width:0}
+.legal-card h2{font-size:clamp(25px,3vw,34px);line-height:1.25;margin-bottom:24px;letter-spacing:-.025em}
+.legal-card p+p{margin-top:18px}
+.legal-card a{text-decoration:underline;text-underline-offset:4px;overflow-wrap:anywhere}
+.legal-details{margin:0;display:grid;gap:22px}
+.legal-details>div{display:grid;grid-template-columns:minmax(120px,1fr) minmax(0,2fr);gap:20px}
+.legal-details dt{font-weight:600;font-size:14px}
+.legal-details dd{margin:0;min-width:0}
+.legal-details+p{margin-top:24px;font-size:14px}
+.legal-card .placeholder{color:#66513b;background:#ece2d3;border-radius:10px;padding:8px 12px;display:block;font-size:13px;line-height:1.7;overflow-wrap:anywhere}
+.legal-navigation{display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-top:42px;font-size:14px}
+.legal-navigation .line-link{margin-left:auto}
+.legal-page footer{padding-bottom:45px}
+@media(max-width:600px){.legal-main{width:calc(100% - 32px);padding-top:32px}.legal-page #main .legal-card{padding:24px 20px;border-radius:22px}.legal-note{padding:22px}.legal-details>div{grid-template-columns:1fr;gap:8px}.legal-navigation .line-link{margin-left:0;flex-basis:100%;width:fit-content}.legal-intro{margin-bottom:30px}}
+@media print{.legal-page header,.legal-page footer,.legal-navigation,.skip{display:none}.legal-main{width:100%;max-width:none;padding:0}.legal-page #main .legal-card{background:white;padding:20px 0;border:0;border-radius:0;break-inside:avoid}.legal-note{background:white}.legal-card .placeholder{background:white;border:1px dashed #777}.legal-intro h1{font-size:32px}}

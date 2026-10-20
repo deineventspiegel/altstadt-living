@@ -24,8 +24,8 @@ for f in ROOT.glob('*.html'):
  if f.name=='dashboard.html':continue
  p=Page();p.feed(f.read_text());pages[f.name]=p
  assert len(p.ids)==len(set(p.ids)),f'Duplicate IDs: {f}'
- assert p.facts==(0 if f.name=='buchen.html' else 12 if f.name=='index.html' else 6),f'Icons: {f}'
- assert len(p.maps)==(0 if f.name=='buchen.html' else 1)
+ assert p.facts==({'index.html':12,'apartment-1.html':6,'apartment-2.html':6}.get(f.name,0)),f'Icons: {f}'
+ assert len(p.maps)==(1 if f.name in ['index.html','apartment-1.html','apartment-2.html'] else 0)
  if p.maps:assert parse_qs(urlparse(p.maps[0]['src']).query)['q']==['Burgplatz 14, 40213 Düsseldorf, Deutschland']
  assert 'Gestaltungsvorschau · Buchungsstart in Vorbereitung' not in ''.join(p.visible)
  assert 'Beispielbild' not in ''.join(p.visible)
